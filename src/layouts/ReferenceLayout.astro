@@ -1,0 +1,14 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from './Layout.astro';
+
+type Props = CollectionEntry<'reference'>['data'];
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <article class="mx-auto prose prose-img:rounded-xl prose-a:text-blue-600">
+    <slot />
+  </article>
+</Layout>

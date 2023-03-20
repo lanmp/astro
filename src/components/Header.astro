@@ -1,0 +1,7 @@
+---
+import Header from "./Header";
+
+const { title } = Astro.props;
+---
+
+<Header client:visible title={title} base={import.meta.env.BASE_URL} />
